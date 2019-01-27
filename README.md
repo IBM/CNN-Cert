@@ -56,7 +56,7 @@ git clone https://github.com/AkhilanB/CNN-Cert.git
 cd CNN-Cert
 ```
 
-4. Download the [pre-trained CNN models](https://www.dropbox.com/s/mhe8u2vpugxz5ed/models.zip?dl=0) used in the paper.
+4. Download the [pre-trained CNN models](https://www.dropbox.com/s/mhe8u2vpugxz5ed/models.zip?dl=0) used in the paper. 
 ```
 wget https://www.dropbox.com/s/1ijw4mtdm57ayvs/models.zip
 unzip models.zip
@@ -147,7 +147,7 @@ Example: mnist_cnn_lenet_nopool
 ```
 
 
-1. To train new models, we provide the following scripts: `train_cnn.py`,`train_lenet.py`,`train_nlayer.py`,`train_resnet.py`.
+1. The pre-trained models are used as an example to evaluate CNN-Cert and are not particularly optimized with the test accuracy. We encourage users could also train their own models and apply CNN-Cert. We provide the following example scripts: `train_cnn.py`,`train_lenet.py`,`train_nlayer.py`,`train_resnet.py`.
 
 Models will be stored in the `models` folder. All models are trained and stored with Keras. To train your own model, call the training function in the appopriate file. For example, to train a 4-layer CNN trained on MNIST for 10 epochs with 5 filters per layer and 3x3 filters, run:
 ```
