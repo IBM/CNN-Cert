@@ -58,7 +58,7 @@ cd CNN-Cert
 
 4. Download the [pre-trained CNN models](https://www.dropbox.com/s/mhe8u2vpugxz5ed/models.zip?dl=0) used in the paper. 
 ```
-wget https://www.dropbox.com/s/1ijw4mtdm57ayvs/models.zip
+wget https://www.dropbox.com/s/mhe8u2vpugxz5ed/models.zip
 unzip models.zip
 ```
 
