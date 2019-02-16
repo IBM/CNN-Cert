@@ -1,3 +1,5 @@
+![Summary](Summary.PNG)
+
 About CNN-Cert
 =====================================
 CNN-Cert is a general and efficient framework for certifying the robustness of convolutional neural networks (CNN). 
@@ -20,6 +22,8 @@ Neural Networks",
   month = "Jan"
 }
 ```
+
+![Related Work](RelatedWork.PNG)
 
 Setup
 -----------------------
@@ -226,3 +230,9 @@ To compute the average l-2 CNN-Cert bound over 10 images on a CIFAR sigmoid Resn
 from pymain import run_cnn
 bound, time = run_cnn('my_cifar_resnet', 10, '2', core = False, activation = 'sigmoid', cifar = True)
 ```
+
+Experimental Results
+----------------
+Results of running CNN-Cert are shown for some example networks with different perturbation norms. CNN-Cert is compared to other certified bounds in both bounds and runtimes. As illustrated, for the example networks CNN-Cert performs similar to or better than the compared methods with faster runtime.
+![Bounds Results](BoundsResults.PNG)
+![Runtime Results](RuntimeResults.PNG)
