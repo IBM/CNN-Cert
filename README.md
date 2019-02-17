@@ -5,7 +5,7 @@ About CNN-Cert
 CNN-Cert is a general and efficient framework for certifying the robustness of convolutional neural networks (CNN). 
 * CNN-Cert is **general**: it is able to certify lower bounds on the minimum adversarial distortion for a variety of CNNs with general activations (ReLU, tanh, sigmoid, arctan, etc), including those with convolutional layers, pooling layers, residual layers and batch-norm layers. In addition, it is a generalized version of previous robustness certification algorithms [Fast-Lin](https://arxiv.org/pdf/1804.09699.pdf) and [CROWN](https://arxiv.org/pdf/1811.00866.pdf) which focus on pure fully-connected networks with ReLU and general activations.   
 
-* CNN-Cert is also **efficient**: it exploits convolutional structure to produce bounds more efficiently than comparable certification methods. We observed in our experiments that CNN-Cert achieves up to 17 and 11 times of speed-up compared to Fast-Lin and CROWN, and up to 366 times of speed-up compared to the dual-LP-based verification methods (see Tables 3-13 in our paper) while CNN-Cert obtains similar or even better robsutness certificates (a.k.a. certified lower bounds).
+* CNN-Cert is also **efficient**: it exploits convolutional structure to produce bounds more efficiently than comparable certification methods. We observed in our experiments that CNN-Cert achieves up to 17 and 11 times of speed-up compared to Fast-Lin and CROWN, and up to 366 times of speed-up compared to the dual-LP-based verification methods (see Tables 3-13 in our paper) while CNN-Cert obtains similar or even better robustness certificates (a.k.a. certified lower bounds).
 
 Cite our work:
 
@@ -115,7 +115,7 @@ The main CNN-Cert functions are included in `cnn_bounds_full.py` and `cnn_bounds
 
 Training your own models and evaluating CNN-Cert and other methods
 -----------------------
-0. We provide pre-trained models [here](https://www.dropbox.com/s/mhe8u2vpugxz5ed/models.zip?dl=0). The pre-trained models use the follwing naming convention:
+0. We provide pre-trained models [here](https://www.dropbox.com/s/mhe8u2vpugxz5ed/models.zip?dl=0). The pre-trained models use the following naming convention:
 
 Pure CNN Models:
 ```
