@@ -1,3 +1,11 @@
+What's New
+=====================================
+* Added links to Medium post and video summarizing this work
+
+Overview
+=====================================
+Please refer to [this post](https://medium.com/@MITIBMLab/cnn-cert-a-certified-measure-of-robustness-for-convolutional-neural-networks-fd2ff44c6807) for an overview of recent robustness evaluation algorithms and our contributions. We provide a video summary of this work [here](https://www.youtube.com/watch?v=Sz9I_zE4jto).
+
 ![Summary](Summary.PNG)
 
 About CNN-Cert
