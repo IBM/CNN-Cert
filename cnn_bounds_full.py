@@ -142,7 +142,7 @@ class Model:
             elif type(layer) == BatchNormalization:
                 print('batch normalization')
                 gamma, beta, mean, std = weights
-                std = np.sqrt(std**2+0.001) #Avoids zero division
+                std = np.sqrt(std+0.001) #Avoids zero division
                 a = gamma/std
                 b = -gamma*mean/std+beta
                 self.weights[-1] = a*self.weights[-1]
@@ -203,21 +203,21 @@ class Model:
                 W3, bias3 = conv3.get_weights()
                 
                 gamma1, beta1, mean1, std1 = bn1.get_weights()
-                std1 = np.sqrt(std1**2+0.001) #Avoids zero division
+                std1 = np.sqrt(std1+0.001) #Avoids zero division
                 a1 = gamma1/std1
                 b1 = gamma1*mean1/std1+beta1
                 W1 = a1*W1
                 bias1 = a1*bias1+b1
                 
                 gamma2, beta2, mean2, std2 = bn2.get_weights()
-                std2 = np.sqrt(std2**2+0.001) #Avoids zero division
+                std2 = np.sqrt(std2+0.001) #Avoids zero division
                 a2 = gamma2/std2
                 b2 = gamma2*mean2/std2+beta2
                 W2 = a2*W2
                 bias2 = a2*bias2+b2
                  
                 gamma3, beta3, mean3, std3 = bn3.get_weights()
-                std3 = np.sqrt(std3**2+0.001) #Avoids zero division
+                std3 = np.sqrt(std3+0.001) #Avoids zero division
                 a3 = gamma3/std3
                 b3 = gamma3*mean3/std3+beta3
                 W3 = a3*W3
@@ -279,14 +279,14 @@ class Model:
                 W2, bias2 = conv2.get_weights()
                 
                 gamma1, beta1, mean1, std1 = bn1.get_weights()
-                std1 = np.sqrt(std1**2+0.001) #Avoids zero division
+                std1 = np.sqrt(std1+0.001) #Avoids zero division
                 a1 = gamma1/std1
                 b1 = gamma1*mean1/std1+beta1
                 W1 = a1*W1
                 bias1 = a1*bias1+b1
                 
                 gamma2, beta2, mean2, std2 = bn2.get_weights()
-                std2 = np.sqrt(std2**2+0.001) #Avoids zero division
+                std2 = np.sqrt(std2+0.001) #Avoids zero division
                 a2 = gamma2/std2
                 b2 = gamma2*mean2/std2+beta2
                 W2 = a2*W2
@@ -438,7 +438,7 @@ def UL_pool_bound(A, B, pad, stride, pool_size, inner_pad, inner_stride, inner_s
             for t in range(A_new.shape[3]):
                 for u in range(A_new.shape[4]):
                     inner_index_x = t+stride[0]*inner_stride[0]*x-inner_stride[0]*pad[0]-inner_pad[0]
-                    inner_index_y = u+stride[1]*inner_stride[1]*x-inner_stride[1]*pad[2]-inner_pad[2]
+                    inner_index_y = u+stride[1]*inner_stride[1]*y-inner_stride[1]*pad[2]-inner_pad[2]
                     if 0<=inner_index_x<inner_shape[0] and 0<=inner_index_y<inner_shape[1]:
                         for p in range(A.shape[3]):
                             for q in range(A.shape[4]):
